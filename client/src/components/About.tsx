@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Terminal, Cloud, Database, Layout, FileCode, GitBranch } from "lucide-react";
+import { SiAmazon } from "react-icons/si";
 
 export default function About() {
   const techStacks = {
@@ -29,6 +30,27 @@ export default function About() {
             delivered enterprise-grade solutions across various domains, from high-load microservices 
             to distributed systems and responsive web applications.
           </p>
+
+          <Card className="mb-8">
+            <CardContent className="pt-6">
+              <div className="flex items-center gap-3 mb-4">
+                <SiAmazon className="h-8 w-8 text-primary" />
+                <div>
+                  <h3 className="font-bold text-lg">AWS Certified Solutions Architect</h3>
+                  <p className="text-muted-foreground">
+                    <a 
+                      href="https://www.credly.com/badges/0d2ad17d-fbcc-4183-8217-555dd23ef5bf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-primary transition-colors"
+                    >
+                      View Certificate
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
             <Card>
