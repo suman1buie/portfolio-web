@@ -4,42 +4,41 @@ import { ArrowDown } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center relative">
-      <div className="text-center">
+    <section className="min-h-[90vh] flex items-center justify-center relative bg-gradient-to-b from-background to-muted/20">
+      <div className="text-center max-w-4xl px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="mb-8">
-            <img
-              src="https://images.unsplash.com/photo-1507679799987-c73779587ccf"
-              alt="Profile"
-              className="w-40 h-40 rounded-full mx-auto object-cover"
-            />
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Hi, I'm <span className="text-primary">John Doe</span>
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+            John Doe
+            <span className="block text-xl md:text-2xl font-normal text-muted-foreground mt-4">
+              Full Stack Developer
+            </span>
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            A passionate full-stack developer crafting beautiful and functional web experiences
+          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+            I craft exceptional digital experiences through clean code and intuitive design.
+            Specializing in modern web technologies and scalable solutions.
           </p>
           <div className="flex gap-4 justify-center">
-            <Button size="lg" asChild>
+            <Button size="lg" className="px-8" asChild>
               <a href="#contact">Get in Touch</a>
             </Button>
-            <Button size="lg" variant="outline" asChild>
-              <a href="/resume.pdf" target="_blank">Download CV</a>
+            <Button size="lg" variant="outline" className="px-8" asChild>
+              <a href="#projects">View Work</a>
             </Button>
           </div>
         </motion.div>
       </div>
-      <a
-        href="#about"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce"
-      >
-        <ArrowDown className="h-6 w-6" />
-      </a>
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+        <a
+          href="#about"
+          className="text-muted-foreground hover:text-foreground transition-colors"
+        >
+          <ArrowDown className="h-6 w-6 animate-bounce" />
+        </a>
+      </div>
     </section>
   );
 }

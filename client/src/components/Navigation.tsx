@@ -27,7 +27,7 @@ export default function Navigation() {
         <a
           key={item.href}
           href={item.href}
-          className="text-foreground/70 hover:text-foreground transition-colors"
+          className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
         >
           {item.label}
         </a>
@@ -38,13 +38,13 @@ export default function Navigation() {
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-background/80 backdrop-blur-sm shadow-sm" : ""
+        scrolled ? "bg-background/95 backdrop-blur-sm border-b" : ""
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="h-16 flex items-center justify-between">
-          <a href="#" className="text-xl font-bold">
-            Portfolio
+          <a href="#" className="text-xl font-semibold tracking-tight">
+            JD
           </a>
 
           {/* Desktop Navigation */}
@@ -55,12 +55,12 @@ export default function Navigation() {
           {/* Mobile Navigation */}
           <Sheet>
             <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
+              <Button variant="ghost" size="icon" className="h-9 w-9">
+                <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
             <SheetContent>
-              <div className="flex flex-col gap-4 mt-8">
+              <div className="flex flex-col gap-6 mt-8">
                 <NavLinks />
               </div>
             </SheetContent>
