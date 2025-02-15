@@ -14,12 +14,12 @@ export default function Hero() {
           <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
             John Doe
             <span className="block text-xl md:text-2xl font-normal text-muted-foreground mt-4">
-              Senior Full Stack Developer
+              Senior Full Stack Developer & System Architect
             </span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            Experienced software engineer specializing in cloud-native applications and full-stack development.
-            4+ years of expertise in Python, Node.js, React, and cloud technologies.
+            Experienced software engineer specializing in cloud-native applications, system architecture, and full-stack development.
+            4+ years of expertise in Python, Node.js, React, and system design (HLD/LLD).
           </p>
           <div className="flex gap-4 justify-center">
             <Button size="lg" className="px-8" asChild>
