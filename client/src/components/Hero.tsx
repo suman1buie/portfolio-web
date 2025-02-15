@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Github } from "lucide-react";
+import { SiLeetcode } from "react-icons/si";
 
 export default function Hero() {
   return (
@@ -21,13 +22,31 @@ export default function Hero() {
             Experienced software engineer specializing in cloud-native applications, system architecture, and full-stack development.
             4+ years of expertise in Python, Node.js, React, and system design (HLD/LLD).
           </p>
-          <div className="flex gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <Button size="lg" className="px-8" asChild>
               <a href="#contact">Hire Me</a>
             </Button>
             <Button size="lg" variant="outline" className="px-8" asChild>
               <a href="#projects">View Portfolio</a>
             </Button>
+          </div>
+          <div className="flex justify-center gap-4">
+            <a
+              href="https://github.com/suman1buie"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <Github className="h-6 w-6" />
+            </a>
+            <a
+              href="https://leetcode.com/u/suman_buie/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <SiLeetcode className="h-6 w-6" />
+            </a>
           </div>
         </motion.div>
       </div>
