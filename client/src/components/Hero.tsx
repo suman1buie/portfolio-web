@@ -13,9 +13,9 @@ export default function Hero() {
           transition={{ duration: 0.5 }}
         >
           <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
-            John Doe
+            Suman Mandal
             <span className="block text-xl md:text-2xl font-normal text-muted-foreground mt-4">
-              Senior Full Stack Developer & System Architect
+              Senior  Full  Stack  Developer  &  System  Architect
             </span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">

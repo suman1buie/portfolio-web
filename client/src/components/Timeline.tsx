@@ -5,11 +5,11 @@ import { Calendar, Briefcase } from "lucide-react";
 
 const experiences = [
   {
-    title: "Senior Full Stack Developer",
-    company: "Tech Solutions Inc.",
-    period: "2023 - Present",
+    title: "Full Stack Developer",
+    company: "T-systems India Private ltd.",
+    period: "Dec, 2023- Present",
     description: "Leading development of cloud-native applications and system architecture design.",
-    skills: ["AWS", "React", "Node.js", "Python", "System Design"],
+    skills: ["React", "Django", "Python", "Salt", "Postgrase", "GCP", "AWS", "System Design"],
     highlights: [
       "Designed and implemented scalable microservices architecture",
       "Led team of 5 developers in delivering enterprise solutions",
