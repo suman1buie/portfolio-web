@@ -51,13 +51,22 @@ export default function Contact() {
   return (
     <section id="contact" className="py-20">
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 15 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-        className="max-w-2xl mx-auto"
+        transition={{ duration: 0.3 }}
+        viewport={{ once: true, margin: "-50px" }}
+        className="max-w-4xl mx-auto px-4"
       >
         <h2 className="text-3xl font-bold mb-8 text-center">Contact Me</h2>
+        <div className="flex flex-col sm:flex-row justify-center gap-6 mb-8 text-foreground/70 text-sm">
+          <a href="mailto:suman.buie.cpp@gmail.com" className="hover:text-primary transition-colors duration-200">
+            ✉️ suman.buie.cpp@gmail.com
+          </a>
+          <a href="tel:+918918821176" className="hover:text-primary transition-colors duration-200">
+            📱 +91-8918821176
+          </a>
+          <span>📍 Pune, India</span>
+        </div>
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit((data) => mutation.mutate(data))}

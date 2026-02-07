@@ -6,29 +6,40 @@ import { SiLeetcode } from "react-icons/si";
 
 const projects = [
   {
-    title: "Leetcode Solutions",
-    description: "Active problem solver on LeetCode with focus on Data Structures, Algorithms, and System Design challenges.",
+    title: "Virtual Painting App",
+    description: "A virtual painting application built using OpenCV and Python3 — draw in the air using hand gestures tracked by your webcam. ⭐ 7 stars",
+    image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5",
+    github: "https://github.com/suman1buie/Virtual-painting-app",
+  },
+  {
+    title: "piKbazar",
+    description: "A fullstack e-commerce web application built on the Django framework with SQLite database for product listings and management.",
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d",
+    github: "https://github.com/suman1buie/piKbazar",
+  },
+  {
+    title: "Smart Attendance System",
+    description: "An intelligent attendance management system built with Python, leveraging computer vision for automated face recognition.",
+    image: "https://images.unsplash.com/photo-1531482615713-2afd69097998",
+    github: "https://github.com/suman1buie/smart_attendence_system",
+  },
+  {
+    title: "buieSpace",
+    description: "Final year college project — a collaborative web platform for students and teams to connect and share resources.",
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c",
+    github: "https://github.com/suman1buie/buieSpace",
+  },
+  {
+    title: "E-Commerce Site",
+    description: "A full-featured e-commerce website built with Django, featuring product catalog, cart system, and order management.",
+    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3",
+    github: "https://github.com/suman1buie/e-com",
+  },
+  {
+    title: "LeetCode Journey",
+    description: "622+ problems solved on LeetCode in C++ & Python. Contest rating 1,650 (Top 17.44%). Strong in DP, Backtracking, and Graph algorithms.",
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
     leetcode: "https://leetcode.com/u/suman_buie/",
-    github: "https://github.com/suman1buie",
-  },
-  {
-    title: "Open Source Contributions",
-    description: "Active contributor to various open source projects, focusing on web development and system architecture.",
-    image: "https://images.unsplash.com/photo-1556075798-4825dfaaf498",
-    demo: "https://github.com/suman1buie",
-    github: "https://github.com/suman1buie",
-  },
-  {
-    title: "Backend Optimization",
-    description: "Experience in designing and implementing scalable backend solutions using Python, Django, and Node.js",
-    image: "https://images.unsplash.com/photo-1510915361894-db8b60106cb1",
-    github: "https://github.com/suman1buie",
-  },
-  {
-    title: "System Architecture",
-    description: "Expertise in designing and implementing high-level (HLD) and low-level (LLD) system architectures",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
     github: "https://github.com/suman1buie",
   },
 ];
@@ -37,10 +48,10 @@ export default function Projects() {
   return (
     <section id="projects" className="py-20 overflow-hidden">
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 15 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
+        transition={{ duration: 0.3 }}
+        viewport={{ once: true, margin: "-50px" }}
       >
         <h2 className="text-3xl font-bold mb-8 text-center">Projects & Contributions</h2>
         <div className="flex justify-center gap-6 mb-12">
@@ -57,22 +68,20 @@ export default function Projects() {
             </a>
           </Button>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.25, delay: index * 0.05 }}
+              viewport={{ once: true, margin: "-30px" }}
               whileHover={{ 
-                scale: 1.02,
-                rotateY: 5,
-                rotateX: 2,
-                translateZ: 20
+                scale: 1.03,
+                y: -5
               }}
-              className="perspective-1000"
             >
-              <Card className="overflow-hidden transform-gpu transition-all duration-300 hover:shadow-xl will-change-transform">
+              <Card className="overflow-hidden shadow-sm dark:shadow-none transform-gpu transition-all duration-200 hover:shadow-xl hover:border-primary/40 will-change-transform">
                 <motion.div
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.3 }}
@@ -83,13 +92,13 @@ export default function Projects() {
                     alt={project.title}
                     className="w-full h-full object-cover transform-gpu transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 </motion.div>
-                <CardHeader>
-                  <CardTitle className="relative z-10">{project.title}</CardTitle>
+                <CardHeader className="-mt-12 relative z-10">
+                  <CardTitle className="text-white drop-shadow-md">{project.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground mb-4">{project.description}</p>
+                  <p className="text-foreground/70 mb-4">{project.description}</p>
                   <div className="flex gap-4">
                     {project.leetcode && (
                       <Button variant="outline" size="sm" asChild>

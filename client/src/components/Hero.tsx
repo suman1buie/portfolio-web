@@ -5,22 +5,21 @@ import { SiLeetcode } from "react-icons/si";
 
 export default function Hero() {
   return (
-    <section className="min-h-[90vh] flex items-center justify-center relative bg-gradient-to-b from-background to-muted/20">
-      <div className="text-center max-w-4xl px-4">
+    <section className="min-h-[90vh] flex items-center justify-center relative bg-gradient-to-b from-background via-background to-primary/10">
+      <div className="text-center max-w-5xl px-6">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.3 }}
         >
           <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
             Suman Mandal
-            <span className="block text-xl md:text-2xl font-normal text-muted-foreground mt-4">
-              Senior  Full  Stack  Developer  &  System  Architect
+            <span className="block text-xl md:text-2xl font-normal text-primary/80 mt-4">
+              Backend Developer | Python, Django, Docker, K8S &amp; AWS
             </span>
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            Experienced software engineer specializing in cloud-native applications, system architecture, and full-stack development.
-            4+ years of expertise in Python, Node.js, React, and system design (HLD/LLD).
+          <p className="text-lg md:text-xl text-foreground/70 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Software Engineer at T-Systems (Deutsche Telekom) with 4.5+ years of experience building scalable backend systems. Specialized in Python, Django, Docker, Kubernetes &amp; cloud automation on AWS/GCP. AWS Certified Solutions Architect. 622+ LeetCode problems solved.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <Button size="lg" className="px-8" asChild>
@@ -35,7 +34,7 @@ export default function Hero() {
               href="https://github.com/suman1buie"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-foreground/60 hover:text-primary transition-colors duration-200"
             >
               <Github className="h-6 w-6" />
             </a>
@@ -43,7 +42,7 @@ export default function Hero() {
               href="https://leetcode.com/u/suman_buie/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-foreground/60 hover:text-primary transition-colors duration-200"
             >
               <SiLeetcode className="h-6 w-6" />
             </a>
@@ -51,7 +50,7 @@ export default function Hero() {
               href="https://www.linkedin.com/in/suman-mandal-6113b41b1/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-foreground/60 hover:text-primary transition-colors duration-200"
             >
               <Linkedin className="h-6 w-6" />
             </a>
@@ -61,7 +60,7 @@ export default function Hero() {
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
         <a
           href="#about"
-          className="text-muted-foreground hover:text-foreground transition-colors"
+          className="text-foreground/50 hover:text-primary transition-colors duration-200"
         >
           <ArrowDown className="h-6 w-6 animate-bounce" />
         </a>
